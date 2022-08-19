@@ -28,3 +28,12 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: Update 
+      run: git pull
+    - name: Build
+      run: ./build.sh
+    - name: Deploy
+      run: ./deploy-dev.sh
+    - name: Send greeting
+      run: echo "Hello ${{ github.event.inputs.name }}"
+      
